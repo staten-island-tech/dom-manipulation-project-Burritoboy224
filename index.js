@@ -8,24 +8,28 @@ const DOMSelectors = {
     cards: document.querySelector("cards"),
 }
 DOMSelectors.form.addEventListener('submit', function (event) {  
-    event.preventDefault()
+    event.preventDefault();
+    const cards = {
+        pokemon: DOMSelectors.pokemon.value,
+        type: DOMSelectors.type.value,
+        image: DOMSelectors.image.value,
+        };
     makecard();
     eraseInfo();
     clearCard();
 })
  function makecard(cards) {
 DOMSelectors.box.insertAdjacentHTML 
- pokemon = DOMSelectors.pokemon.value;
- type = DOMSelectors.type.value;
- image = DOMSelectors.image.value;
+
  "afterbegin",
  `<div class="card-maker">
  <h2>Name: ${pokemon.Name}</h2>
  <img src= "${pokemon.image}" alt=">
  <h2>Type: ${pokemon.type}</h2>
  <h3 class="pokemon-url" id="image-url">${cards.url}</h3>
+ <button class = "clearCard" >remove</button>
  </div>`
- 
+
  }
 
 
