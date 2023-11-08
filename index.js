@@ -8,18 +8,12 @@ const DOMSelectors = {
     cardsz: document.getElementById("cardsz"),
 }
 
-
-
-
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     addCard();
     clearCard();
     eraseInfo();
 });
-
-
-
 
 function addCard() {
     cardsz.insertAdjacentHTML("beforeend",
@@ -35,17 +29,12 @@ function addCard() {
 
 
 
-
-function clearCard() {
-    document.querySelectorAll(".clear").forEach((buttons) => {
-        buttons.addEventListener("click", function (buttons) {
-            buttons.target.parentElement.remove();
-        });
-    });
-}
-
-
-
+function clearCard () {
+    const button = document.querySelectorAll(".delete");
+    button.forEach((button) => 
+    button.addEventListener ("click", function (button){
+        button.target.parentElement.remove()}
+        ))};
 
 function eraseInfo() {
     DOMSelectors.name.value = "";
