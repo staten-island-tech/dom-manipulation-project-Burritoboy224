@@ -1,40 +1,61 @@
 const DOMSelectors = {
     form: document.getElementById("form"),
-    input: document.querySelectorAll("input"),
-    pokemon: document.getElementById("pokemon"),
-    type: document.getElementById("type"),
-    image: document.getElementById("image"),
-    button: document.getElementById("btn"),
-    cards: document.querySelector("cards"),
+    input: document.getElementById("input"),
+    name: document.getElementById("name-what"),
+    type: document.getElementById("type-what"),
+    image: document.getElementById("image-what"),
+    button: document.getElementById("btn-what"),
+    cardsz: document.getElementById("cardsz"),
 }
-DOMSelectors.form.addEventListener('submit', function (event) {  
+
+
+
+
+DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
-    const cards = {
-        pokemon: DOMSelectors.pokemon.value,
-        type: DOMSelectors.type.value,
-        image: DOMSelectors.image.value,
-        };
-    makecard();
-    eraseInfo();
+    addCard();
     clearCard();
-})
- function makecard(cards) {
-DOMSelectors.box.insertAdjacentHTML 
+    eraseInfo();
+});
 
- "afterbegin",
- `<div class="card-maker">
- <h2>Name: ${pokemon.Name}</h2>
- <img src= "${pokemon.image}" alt=">
- <h2>Type: ${pokemon.type}</h2>
- <h3 class="pokemon-url" id="image-url">${cards.url}</h3>
- <button class = "clearCard" >remove</button>
- </div>`
 
- }
+
+
+function addCard() {
+    cardsz.insertAdjacentHTML("beforeend",
+        `
+    <div class="cards">
+    <h2>${DOMSelectors.name.value}</h2>
+    <h2>${DOMSelectors.type.value}</h2>
+    <img id="cards-image" src="${img = DOMSelectors.image.value}">
+    <button class="delete">Remove</button>
+    </div>`
+    );
+}
+
+
+
+
+function clearCard() {
+    document.querySelectorAll(".clear").forEach((buttons) => {
+        buttons.addEventListener("click", function (buttons) {
+            buttons.target.parentElement.remove();
+        });
+    });
+}
+
+
 
 
 function eraseInfo() {
-    DOMSelectors.pokemon.value = "";
+    DOMSelectors.name.value = "";
     DOMSelectors.type.value = "";
     DOMSelectors.image.value = "";
-  }
+}
+
+
+
+
+
+
+
