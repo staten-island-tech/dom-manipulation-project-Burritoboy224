@@ -16,12 +16,12 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 });
 
 function addCard() {
-    cardsz.insertAdjacentHTML("beforeend",
+    cardsz.insertAdjacentHTML("afterbegin",
         `
     <div class="cards">
     <h2>${DOMSelectors.name.value}</h2>
     <h2>${DOMSelectors.type.value}</h2>
-    <img id="cards-image" src="${img = DOMSelectors.image.value}">
+    <img class="card-img" src="${cardsz.image}" alt="">
     <button class="delete">Remove</button>
     </div>`
     );

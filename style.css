@@ -1,5 +1,15 @@
 body {
-    background-color: cyan;
+        text-align: center;
+        padding: auto;
+        background-image: url(iamges/pokemon.png.jpg);
 }
+#form{
+    font-size: 15px;}
 
-
+    .cardsz{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+    }
+    
