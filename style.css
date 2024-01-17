@@ -13,3 +13,24 @@ body {
         position: relative;
     }
     
+    .cards {
+        border: 20px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    
+    .card-img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    
+    .delete {
+        background-color: #ff0000;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }

@@ -21,7 +21,7 @@ function addCard() {
     <div class="cards">
     <h2>${DOMSelectors.name.value}</h2>
     <h2>${DOMSelectors.type.value}</h2>
-    <img class="card-img" src="${cardsz.image}" alt="">
+    <img class="card-img" src="${DOMSelectors.image.value}" alt="">
     <button class="delete">Remove</button>
     </div>`
     );
